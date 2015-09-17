@@ -1,25 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
-	<!-- 定义一个普通菜单项 -->
-	<item android:id="@+id/syn"
-	    android:showAsAction="always|withText"
-	    android:icon="@drawable/ic_syn"
-		android:title="同步"/>
-	<item android:id="@+id/add"
-	    android:showAsAction="always|withText"
-	    android:icon="@drawable/ic_add"
-		android:title="添加"/>
-	<item
-		android:id="@+id/showcheckedoff"
-		android:title="显示注销任务"/>
-	<item
-		android:id="@+id/hidecheckedoff"
-		android:title="隐藏注销任务"/>	
-	<item
-		android:id="@+id/logout"
-		android:title="退出登陆"/>	
-	<item
-		android:id="@+id/about"
-		android:title="更多信息"/>					
+    <!-- 定义一个普通菜单项 -->
+    <item
+        android:id="@+id/syn"
+        android:icon="@drawable/ic_syn"
+        android:showAsAction="always|withText"
+        android:title="同步"/>
+    <item
+        android:id="@+id/add"
+        android:icon="@drawable/ic_add"
+        android:showAsAction="always|withText"
+        android:title="添加"/>
+    <item
+        android:id="@+id/showcheckedoff"
+        android:title="显示注销任务"/>
+    <item
+        android:id="@+id/hidecheckedoff"
+        android:title="隐藏注销任务"/>
+    <item
+        android:id="@+id/logout"
+        android:title="退出登陆"/>
+    <item
+        android:id="@+id/about"
+        android:title="更多信息"/>
+
 </menu>

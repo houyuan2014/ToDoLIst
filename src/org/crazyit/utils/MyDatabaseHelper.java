@@ -5,11 +5,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class MyDatabaseHelper extends SQLiteOpenHelper {
-	
-	final String CREATE_TABLE_USER =
-			"CREATE TABLE user (_id INTEGER PRIMARY KEY AUTOINCREMENT, email VARCHAR, pass VARCHAR, status INTEGER, last_sync, show_all_tag)";
-	final String CREATE_TABLE_TASK =
-			"CREATE TABLE task(_id INTEGER PRIMARY KEY AUTOINCREMENT, name VARCHAR, pri , finish_time , edit_time , create_time, ischeckoff, status INTEGER, email VARCHAR)";
+
+	final String CREATE_TABLE_USER = "CREATE TABLE user (_id INTEGER PRIMARY KEY AUTOINCREMENT, email VARCHAR, pass VARCHAR, status INTEGER, last_sync, show_all_tag)";
+	final String CREATE_TABLE_TASK = "CREATE TABLE task(_id INTEGER PRIMARY KEY AUTOINCREMENT, name VARCHAR, pri , finish_time , edit_time , create_time, ischeckoff, status INTEGER, email VARCHAR)";
 
 	public MyDatabaseHelper(Context context, String name, int version) {
 		super(context, name, null, version);
@@ -25,11 +23,10 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
 	}
 
 	@Override
-	public void onUpgrade(SQLiteDatabase db, int  oldVersion, int newVersion)
-	{
-		System.out.println("--------onUpdate Called--------"
-			+ oldVersion + "--->" + newVersion);
-		
+	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+		System.out.println("--------onUpdate Called--------" + oldVersion
+				+ "--->" + newVersion);
+
 	}
 
 }

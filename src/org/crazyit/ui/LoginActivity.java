@@ -23,9 +23,10 @@ import android.widget.Toast;
 public class LoginActivity extends Activity
 {
 	String email,pass;
-	EditText et_email, et_pass;
+	EditText edittext_email, edittext_pass;
 	Button bn_logup,bn_login,bn_loginoff;
-	boolean offline = false;
+	boolean isoffline = false;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -33,8 +34,8 @@ public class LoginActivity extends Activity
 		setContentView(R.layout.login);
 		
 		//初始化控件
-		et_email = (EditText) findViewById(R.id.email);
-		et_pass = (EditText) findViewById(R.id.pass);
+		edittext_email = (EditText) findViewById(R.id.email);
+		edittext_pass = (EditText) findViewById(R.id.pass);
 		bn_logup = (Button) findViewById(R.id.logup);
 		bn_login = (Button) findViewById(R.id.login);
 		bn_loginoff = (Button) findViewById(R.id.loginoff);
@@ -44,8 +45,8 @@ public class LoginActivity extends Activity
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				email = et_email.getText().toString();
-				pass = et_pass.getText().toString();
+				email = edittext_email.getText().toString();
+				pass = edittext_pass.getText().toString();
 				login(email,pass);
 			}
 		});
@@ -55,8 +56,8 @@ public class LoginActivity extends Activity
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				email = et_email.getText().toString();
-				pass = et_pass.getText().toString();
+				email = edittext_email.getText().toString();
+				pass = edittext_pass.getText().toString();
 				if (validate(email,pass)){
 					//服务器注册处理
 					if(logupPro(email,pass)){
@@ -76,8 +77,8 @@ public class LoginActivity extends Activity
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				email = et_email.getText().toString();
-				pass = et_pass.getText().toString();
+				email = edittext_email.getText().toString();
+				pass = edittext_pass.getText().toString();
 				// 执行输入校验
 				if (validate(email,pass))  
 				{
@@ -124,7 +125,7 @@ public class LoginActivity extends Activity
 		intent.putExtra("email",email);
 		intent.putExtra("pass", pass);
 		intent.putExtra("status", "1");
-		intent.putExtra("offline", offline);
+		intent.putExtra("offline", isoffline);
 		LoginActivity.this.startActivity(intent);
 		// 结束该Activity
 		finish();
@@ -195,12 +196,12 @@ public class LoginActivity extends Activity
 	}
 	
 private void setOffline(){
-		et_email.setText("test@qq.com");
-		et_pass.setText("123");
+		edittext_email.setText("test@qq.com");
+		edittext_pass.setText("123");
 		bn_logup.setVisibility(View.INVISIBLE);
 		bn_login.setVisibility(View.INVISIBLE);
 		bn_loginoff.setVisibility(View.VISIBLE);
-		offline = true;
+		isoffline = true;
 	}
 
 	
