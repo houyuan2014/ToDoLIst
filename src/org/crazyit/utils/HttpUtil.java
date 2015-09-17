@@ -9,6 +9,7 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.params.CoreConnectionPNames;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
@@ -70,6 +71,7 @@ public class HttpUtil {
 					HttpPost post = new HttpPost(url);
 					post.setHeader("Content-Type", "application/x-www-form-urlencoded; charset=utf-8");
 					JSONObject json = new JSONObject(rawParams);
+					post.getParams().setIntParameter(CoreConnectionPNames.CONNECTION_TIMEOUT, 2000);
 					post.setEntity(new StringEntity(json.toString(), HTTP.UTF_8));
 					
 					Log.i("aaaaa", json.toString());
