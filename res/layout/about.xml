@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    
+			<TextView
+          	 	 android:layout_width="match_parent"
+           		 android:layout_height="wrap_content"
+           		 android:layout_margin="6dp"
+           		 android:textSize="20sp"
+           		 android:autoLink="web"
+           		 android:text="网站 ： todolist.f3322.net" />
+			
+     
+        	<TextView
+            	android:layout_width="match_parent"
+            	android:layout_height="wrap_content"
+            	android:layout_margin="6dp"
+            	android:textSize="20sp"
+            	android:text="源码 ：                                      "/>
+
+        	<EditText
+            	android:id="@+id/feedback"
+            	android:layout_width="match_parent"
+            	android:layout_height="wrap_content" 
+            	android:layout_margin="6dp"
+            	android:hint="告诉我们还有什么可以做得更好"/>
+        	<EditText
+            	android:id="@+id/userinfo"
+            	android:layout_width="match_parent"
+            	android:layout_height="wrap_content" 
+            	android:layout_margin="6dp"
+            	android:hint="您的QQ，邮箱，手机号或其他"/>
+        	<Button
+        	    android:id="@+id/bn_feedback"
+        	    android:layout_width="match_parent"
+            	android:layout_height="wrap_content"
+            	android:layout_margin="6dp"
+        	    android:text="提交"/>
+
+  
+
+</LinearLayout>
